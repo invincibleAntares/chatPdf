@@ -96,8 +96,10 @@ app.post('/chat', async (req, res) => {
         .json({ error: 'No context available. Upload a PDF first.' });
     }
 
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
-    const prompt = `Using the provided context, answer the following question:\n\nContext:\n"${globalContext}"\n\nQuestion: "${question}"`;
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash", });
+    const prompt = `Using the provided context and your data also 
+            the context is just the extacted text from a pdf so it may not be perfect,so you have answer based upon both the context and the data you have , 
+    , answer the following question you dont have to limited just to context :\n\nContext:\n"${globalContext}"\n\nQuestion: "${question}"`;
 
     const result = await model.generateContent(prompt);
     const response = result.response;
