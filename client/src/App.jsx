@@ -1,11 +1,12 @@
 import { useEffect } from "react";
-import axios from "axios";
+import api from "./utils/api"; 
 
 function App() {
   const fetchapi = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api");
-      console.log(response);
+    
+      const response = await api.get("/hello");
+      console.log(response.data);
     } catch (error) {
       console.error("Error fetching API:", error);
     }
