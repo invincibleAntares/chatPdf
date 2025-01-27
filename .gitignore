@@ -1,0 +1,31 @@
+# Common ignores
+node_modules/
+.env
+.DS_Store
+dist/
+build/
+*.log
+*.lock
+package-lock.json
+yarn.lock
+
+# Client-specific ignores
+client/node_modules/
+client/dist/
+client/.env*
+client/.vite/
+client/.cache/
+client/.next/
+
+# Server-specific ignores
+server/node_modules/
+server/.env
+server/logs/
+server/*.log
+server/tmp/
+server/.cache/
+
+# Ignore system files
+*.swp
+*.swo
+Thumbs.db

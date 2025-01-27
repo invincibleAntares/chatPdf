@@ -7,9 +7,11 @@ const cors = require('cors');
  };
 
 app.use(cors(corsOptions));
-app.get('/api', (req, res) => {
+app.get('/hello', (req, res) => {
    res.send('Hello World');
 }) 
+
+app.get(hello)
 
 app.listen(3000, () => {
     console.log('Server is running on 3000');
