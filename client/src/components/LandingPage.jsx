@@ -21,7 +21,7 @@ function LandingPage() {
           </div>
           <button
             onClick={handleGetStarted}
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+            className="bg-orange-500 hover:bg-orange-600 cursor-pointer text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
           >
             Get Started
           </button>
@@ -44,7 +44,7 @@ function LandingPage() {
           </p>
           <button
             onClick={handleGetStarted}
-            className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/30"
+            className="bg-orange-500 hover:bg-orange-600 cursor-pointer text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/30"
           >
             Start Exploring Now
           </button>
