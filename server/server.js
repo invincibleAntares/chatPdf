@@ -51,12 +51,15 @@ const extractTextFromPDF = async (filePath) => {
     const pdfData = await pdfParse(dataBuffer);
     return pdfData.text;
   } finally {
-    fs.unlinkSync(filePath); // Clean up uploaded file
+    fs.unlinkSync(filePath);
   }
 };
 
-// Store extracted context globally for simplicity
+
+ // Global Context to store extracted text
 let globalContext = '';
+
+
 
 // Upload Endpoint
 app.post('/upload', upload.single('file'), async (req, res) => {
